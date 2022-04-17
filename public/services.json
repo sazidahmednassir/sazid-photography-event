@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Wedding Photography Service",
+    "price": "1300",
+    "description": "On the wedding day, I will capture portraits as well as documentary photography to preserve the various wedding ceremonies and customs (s).",
+    "img": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8d2VkZGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+  },
+  {
+    "id": 2,
+    "name": "Corporate event Photography Service",
+    "price": "4000",
+    "description": "It includes any visuals intended to advertise or enhance a company's brand, products, services, or experience. These assets are frequently used to promote an organization's value propositions.",
+    "img": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29ycG9yYXRlJTIwZXZlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+  },
+  {
+    "id": 3,
+    "name": "Rag Day Photography Service",
+    "price": "850",
+    "description": "Rag Day Photography Service is the perfect way to capture your memories. We'll take care of everything, from finding the perfect location to styling your session to editing your photos. You'll have a beautiful collection of photos to treasure forever..",
+    "img": "https://images.unsplash.com/photo-1638723950881-81a2092e75dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFnJTIwZGF5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+  },
+  {
+    "id": 4,
+    "name": "Editorial Photography Service",
+    "price": "2800",
+    "description": "Photojournalism tells stories with photographs. Magazines and newspapers regularly use these. As a professional editorial photographer, my goal is to let the photographs speak for themselves.",
+    "img": "https://images.unsplash.com/photo-1556215892-a9e915c41e36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGVkaXRvcmlhbCUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+  },
+  {
+    "id": 5,
+    "name": "Advertising Photography Service",
+    "price": "10000",
+    "description": "Advertising photography is used to promote a product or service. Good advertisement photography draws the viewer in and makes them want to know more about the product. I've spent years making visuals that work.",
+    "img": "https://images.unsplash.com/photo-1558365916-848463c5d803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YWR2ZXJ0aXNpbmclMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+  },
+  {
+    "id": 6,
+    "name": "CookBook Photography Service",
+    "price": "1000",
+    "description": "CookBook is the perfect way to capture your culinary creations and remember your best recipes. I will work with you to create a beautiful photo book that you can use and share with family and friends.",
+    "img": "https://images.unsplash.com/photo-1617460183301-c1b9453e54ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y29va2Jvb2slMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+  }
+]
