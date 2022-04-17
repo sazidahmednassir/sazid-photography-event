@@ -1,0 +1,24 @@
+.banner {
+  position: relative;
+  background-image: url("https://www.androidauthority.com/wp-content/uploads/2018/07/master-photography.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0 200px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.cush {
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 600px) {
+  .cushea {
+    margin-top: 370px;
+  }
+}
