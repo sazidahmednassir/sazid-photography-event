@@ -12,7 +12,7 @@ Live Website Link: https://spontaneous-cucurucho-d4592d.netlify.app/
 - Anyone can Log in.
 - It also has active class in navbar which shows which page you are now.
 
-##What I used this project?
+## What I used this project?
 
 - I used Bootstrap for my entire project design
 - Used React library to make my website fast & mobile-friendly
