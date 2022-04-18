@@ -4,12 +4,18 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div>
+        <div className='container'>
             
-    
-        <footer className='text-center mt-5 text-danger'>
-            <p><small>copyright © {year} Sazid Photography Event</small></p>
-        </footer>
+            <footer class="bg-light text-center text-lg-start">
+
+  <div class="text-center p-3" >
+    © 2020 Copyright: {year} Sazid Photography Event
+   
+  </div>
+  
+</footer>
+
+ 
         </div>
     );
 };
