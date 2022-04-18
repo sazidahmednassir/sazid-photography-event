@@ -5,7 +5,8 @@ const Checkout = () => {
     return (
         <div>
              <div className='container w-50 mx-auto '>
-     <form className='cus'  >
+     <form className='cus pb-5 mb-5'    >
+     <h2>Please CheckOut</h2>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>

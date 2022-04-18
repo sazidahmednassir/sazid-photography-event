@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
 
@@ -34,8 +35,10 @@ const nameRef= useRef(' ');
       }
     return (
         <div className="container w-50 mx-auto">
+      <div className='mb-5 pb-5'>
             <form className='cus' onSubmit={handleSignupSubmit}>
-            <div class="mb-3">
+            <h2>Please Register</h2>
+            <div class="mb-5">
     <label for="exampleInputName" class="form-label">Your Name</label>
     <input ref={nameRef}  type="namel" class="form-control" id="exampleInputName"/>
     
@@ -49,11 +52,16 @@ const nameRef= useRef(' ');
     <label for="exampleInputPassword1" class="form-label">Password</label>
     <input ref={passwordRef} type="password" class="form-control" id="exampleInputPassword1"/>
   </div>
- 
+  
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
   <button type="submit" class="btn btn-primary">Register</button>
 </form>
-
-<div  ><p className='pt-5 mt-5'>Already have an account? <Link  to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p></div>
+</div>
+<div className='pt-5 mt-5 mb-5' ><p className='pt-5 mt-5'>Already have an account? <Link  to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p></div>
+<SocialLogin></SocialLogin>
         </div>
     );
 };
