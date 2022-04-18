@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './Login.css';
 
@@ -13,6 +13,8 @@ const Login = () => {
     error,
   ] = useSignInWithEmailAndPassword(auth);
   const navigate = useNavigate();
+
+  const location=useLocation()
   let from = location.state?.from?.pathname || "/";
 
   const navigateRegister = () => {
@@ -31,7 +33,7 @@ console.log(email,password);
   }
 
   if(user){
-    navigate('/home');
+    navigate(from, { replace: true });
   }
     return (
       <div className='container w-50 mx-auto '>
@@ -46,7 +48,7 @@ console.log(email,password);
     <input ref={passwordRef} type="password" class="form-control" id="exampleInputPassword1"/>
   </div>
  
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Login</button>
 </form>
 
 <div><p>New to Genius Car? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p></div>

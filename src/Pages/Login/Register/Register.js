@@ -50,7 +50,7 @@ const nameRef= useRef(' ');
     <input ref={passwordRef} type="password" class="form-control" id="exampleInputPassword1"/>
   </div>
  
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Register</button>
 </form>
 
 <div  ><p className='pt-5 mt-5'>Already have an account? <Link  to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p></div>

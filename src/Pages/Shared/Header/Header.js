@@ -46,7 +46,7 @@ const Header = () => {
   <li class="nav-item">
     {
       user? 
-      <button className='btn btn-link text-white bg-danger text-decoration-none' onClick={handleSignOut}>sign out</button>
+      <button className='btn btn-danger text-decoration-none' onClick={handleSignOut}>sign out</button>
     :
     <Link class="nav-link" to="/login" >Login</Link>
 }
