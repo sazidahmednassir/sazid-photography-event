@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
+
+  const [agree, setAgree]=useState(false)
 
   const [
     createUserWithEmailAndPassword,
@@ -19,19 +21,25 @@ const navigate=useNavigate();
 }
 
 if(user){
-  navigate('/home');
+  navigate('/');
 }
 const nameRef= useRef(' ');
   const emailRef= useRef(' ');
   const passwordRef=useRef(' ');
+  
 
   const handleSignupSubmit=(event)=>{
     event.preventDefault();
     const name=nameRef.current.value;
     const email= emailRef.current.value;
     const password=passwordRef.current.value;
-    createUserWithEmailAndPassword(email, password)
-    console.log(name, email,password);
+    
+    if(agree){
+      createUserWithEmailAndPassword(email, password)
+      navigate('/');
+    }
+   
+
       }
     return (
         <div className="container w-50 mx-auto">
@@ -54,10 +62,11 @@ const nameRef= useRef(' ');
   </div>
   
   <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="terms"/>
-    <label class="form-check-label" for="terms">Accept Terms and Conditions</label>
+    <input  onClick={()=> setAgree(!agree)} type="checkbox" class="form-check-input" id="terms"/>
+    <label  className={`ps-2 ${agree?  'text-primary': 'text-danger'}`}   class="form-check-label" for="terms">Accept Terms and Conditions</label>
   </div>
-  <button type="submit" class="btn btn-primary">Register</button>
+  <button  disabled={!agree}
+   type="submit" class="btn btn-primary">Register</button>
 </form>
 </div>
 <div className='pt-5 mt-5 mb-5' ><p className='pt-5 mt-5'>Already have an account? <Link  to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p></div>
