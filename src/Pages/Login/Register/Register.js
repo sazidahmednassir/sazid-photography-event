@@ -54,8 +54,8 @@ const nameRef= useRef(' ');
   </div>
   
   <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <input type="checkbox" class="form-check-input" id="terms"/>
+    <label class="form-check-label" for="terms">Accept Terms and Conditions</label>
   </div>
   <button type="submit" class="btn btn-primary">Register</button>
 </form>

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -13,9 +13,8 @@ const Login = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
-  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
-    auth
-  );
+
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail( auth );
   const navigate = useNavigate();
 
   let errorElement;
@@ -34,8 +33,10 @@ const Login = () => {
     navigate('/register');
 }
 
-const resetPassword=()={
-  navigate('')
+const resetPassword= async ()=>{
+  const email= emailRef.current.value;
+  await sendPasswordResetEmail(email);
+  alert('Sent email');
 }
 
   const emailRef= useRef(' ');
