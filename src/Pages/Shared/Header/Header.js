@@ -1,17 +1,15 @@
-import { signOut } from 'firebase/auth';
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-bootstrap';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import auth from '../../../firebase.init';
 import './Header.css';
 
 const Header = () => {
-  const [user]=useAuthState(auth);
+  // const [user]=useAuthState(auth);
+  const [token, setToken] = useState(localStorage.accessToken);
 
-  const handleSignOut = () =>{
-    signOut(auth);
-}
+//   const handleSignOut = () =>{
+//     signOut(auth);
+// }
   return (
     <div className='header mb-4' >
     <div className='container '>
@@ -45,7 +43,7 @@ const Header = () => {
   </li>
   <li class="nav-item">
     {
-      user? 
+     token? 
       <button className='btn btn-danger text-decoration-none' onClick={handleSignOut}>sign out</button>
     :
     <Link class="nav-link" to="/login" >Login</Link>
